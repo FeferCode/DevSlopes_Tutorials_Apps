@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		601013E21FB08A8200929CA3 /* AppleProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601013E11FB08A8200929CA3 /* AppleProduct.swift */; };
+		601013E41FB08B4100929CA3 /* CustomPrettyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601013E31FB08B4100929CA3 /* CustomPrettyView.swift */; };
 		60500AD71FB0729900FB1C6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60500AD61FB0729900FB1C6B /* AppDelegate.swift */; };
 		60500AD91FB0729900FB1C6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60500AD81FB0729900FB1C6B /* ViewController.swift */; };
 		60500ADC1FB0729900FB1C6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60500ADA1FB0729900FB1C6B /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		601013E11FB08A8200929CA3 /* AppleProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleProduct.swift; sourceTree = "<group>"; };
+		601013E31FB08B4100929CA3 /* CustomPrettyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrettyView.swift; sourceTree = "<group>"; };
 		60500AD31FB0729900FB1C6B /* IntroToMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroToMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60500AD61FB0729900FB1C6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60500AD81FB0729900FB1C6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		601013DE1FB088AA00929CA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60500AD81FB0729900FB1C6B /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		601013DF1FB088B400929CA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				601013E31FB08B4100929CA3 /* CustomPrettyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		601013E01FB088BC00929CA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				601013E11FB08A8200929CA3 /* AppleProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		60500ACA1FB0729900FB1C6B = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +82,10 @@
 		60500AD51FB0729900FB1C6B /* IntroToMVC */ = {
 			isa = PBXGroup;
 			children = (
+				601013E01FB088BC00929CA3 /* Model */,
+				601013DF1FB088B400929CA3 /* View */,
+				601013DE1FB088AA00929CA3 /* Controller */,
 				60500AD61FB0729900FB1C6B /* AppDelegate.swift */,
-				60500AD81FB0729900FB1C6B /* ViewController.swift */,
 				60500ADA1FB0729900FB1C6B /* Main.storyboard */,
 				60500ADD1FB0729900FB1C6B /* Assets.xcassets */,
 				60500ADF1FB0729900FB1C6B /* LaunchScreen.storyboard */,
@@ -136,8 +166,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601013E21FB08A8200929CA3 /* AppleProduct.swift in Sources */,
 				60500AD91FB0729900FB1C6B /* ViewController.swift in Sources */,
 				60500AD71FB0729900FB1C6B /* AppDelegate.swift in Sources */,
+				601013E41FB08B4100929CA3 /* CustomPrettyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
