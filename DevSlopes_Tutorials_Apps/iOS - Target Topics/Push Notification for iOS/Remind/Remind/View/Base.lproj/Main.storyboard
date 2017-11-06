@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Remind" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0h-bw-6gq" customClass="ShadowView" customModule="Remind" customModuleProvider="target">
+                                <rect key="frame" x="37" y="183" width="300" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-MP-Hcr">
+                                        <rect key="frame" x="50" y="50" width="200" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmS-xX-n2Y">
+                                                <rect key="frame" x="50" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="2Qs-wG-b5Q"/>
+                                                    <constraint firstAttribute="height" constant="100" id="kO2-dq-m6j"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="timerIcon"/>
+                                                <connections>
+                                                    <action selector="onTimerTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="wCT-j2-t7E"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3M2-ag-Xk2">
+                                                <rect key="frame" x="0.0" y="100" width="200" height="100"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNi-JT-98y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="ktn-bF-4Z4"/>
+                                                            <constraint firstAttribute="width" constant="100" id="sCL-9t-iPc"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="dateIcon"/>
+                                                        <connections>
+                                                            <action selector="onDateTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8R-Ip-SPI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZF-4s-SZh">
+                                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="QqC-r2-bcq"/>
+                                                            <constraint firstAttribute="width" constant="100" id="Urn-s2-wnb"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="locationIcon"/>
+                                                        <connections>
+                                                            <action selector="onLocationTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="4aM-Ad-cuU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VwI-MP-Hcr" firstAttribute="centerX" secondItem="w0h-bw-6gq" secondAttribute="centerX" id="5ZL-CW-2Uf"/>
+                                    <constraint firstAttribute="height" constant="300" id="Fo6-9N-Bc2"/>
+                                    <constraint firstAttribute="width" constant="300" id="deJ-Ga-WWI"/>
+                                    <constraint firstItem="VwI-MP-Hcr" firstAttribute="centerY" secondItem="w0h-bw-6gq" secondAttribute="centerY" id="zBU-k9-J7R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w0h-bw-6gq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fw1-9Z-5ev"/>
+                            <constraint firstItem="w0h-bw-6gq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lQy-vz-sZG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dateIcon" width="100" height="100"/>
+        <image name="locationIcon" width="100" height="100"/>
+        <image name="timerIcon" width="100" height="100"/>
+    </resources>
+</document>
