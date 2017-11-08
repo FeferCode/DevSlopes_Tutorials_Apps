@@ -24,6 +24,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.delegate = self
         tableView.dataSource = self
         
+        generateTestData()
+        attemptFetch()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +71,8 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         fetchRequest.sortDescriptors = [dateSort]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        self.fetchResultController = controller
         
         do {
             try self.fetchResultController.performFetch()
@@ -115,6 +120,26 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         }
         
     }
+    
+    func generateTestData() {
+        let item = Item(context: context)
+        item.title = "MacBook Pro 15' 2018"
+        item.price = 3500
+        item.details = "I will buy if this will have 32GB memory and 6 core CPU"
+        
+        let item1 = Item(context: context)
+        item1.title = "MacBook Pro 15' 2017"
+        item1.price = 3000
+        item1.details = "I will not buy this because it have 16GB memory and only 4 core CPU"
+        
+        let item2 = Item(context: context)
+        item2.title = "iMac 2017"
+        item2.price = 4000
+        item2.details = "Good CPU, GPU and a lot of memory (up to 64GB)"
+        
+        ad.saveContext()
+    }
+    
     
 }
 
