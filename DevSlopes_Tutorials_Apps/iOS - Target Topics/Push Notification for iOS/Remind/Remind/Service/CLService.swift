@@ -31,6 +31,7 @@ class CLService:NSObject {
     }
 }
 
+//This delegate react to events
 extension CLService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("Got location")

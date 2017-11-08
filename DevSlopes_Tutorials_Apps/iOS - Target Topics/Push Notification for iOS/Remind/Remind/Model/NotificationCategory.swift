@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+enum NotificationCategory:String {
+    case timer = "userNotification.category.timer"
+    case date = "userNotification.category.date"
+    case location = "userNotification.category.location"
+}
