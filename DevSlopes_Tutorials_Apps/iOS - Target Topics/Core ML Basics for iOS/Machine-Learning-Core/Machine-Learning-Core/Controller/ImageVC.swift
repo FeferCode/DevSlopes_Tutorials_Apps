@@ -55,9 +55,12 @@ class ImageVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     
     func handleResults(request: VNRequest, error: Error?) {
         guard let results = request.results as? [VNClassificationObservation] else { return }
-        for result in results {
-            print(result.identifier)
-        }
+        let bestResult = results[0]
+        let id = bestResult.identifier.capitalized
+        let confidence = bestResult.confidence * 100
+        let confidenceWithTwoDecimals = String.init(format: "%.2f", confidence)
+//        print(id, String.init(format: "%.2f", confidence) + "%")
+        classificationLabel.text = "\(id): \(confidenceWithTwoDecimals)%"
     }
     
 }
